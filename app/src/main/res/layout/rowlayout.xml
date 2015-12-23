@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:id="@+id/layout_0">
+        <TextView
+            android:id="@+id/start_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="6dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="38dp"
+        android:id= "@+id/layout_1"
+        android:layout_below="@id/layout_0">
+
+
+        <TextView
+            android:id="@+id/label_project"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="2dp"
+            android:text="@string/project_name"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/label_hours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:text="@string/hours"
+            android:textColor="@color/gray"
+            android:textSize="20sp">
+
+        </TextView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="36dp"
+        android:layout_below="@id/layout_1"
+        android:id="@+id/layout_2">
+    <ProgressBar
+        android:id="@+id/progressbar"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="32dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerInParent="false"
+        android:layout_marginEnd="5dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginStart="2dp" />
+
+    <TextView
+        android:id="@+id/show_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/progressbar"
+        android:layout_alignLeft="@id/progressbar"
+        android:layout_alignRight="@id/progressbar"
+        android:layout_alignTop="@id/progressbar"
+        android:background="#00000000"
+        android:gravity="center"
+        android:text="hour_min"
+        android:textSize="20sp">
+
+    </TextView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="42dp"
+        android:layout_below="@+id/layout_2"
+        android:layout_centerVertical="true">
+
+        <Button
+            android:id="@+id/button_set"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="2dp"
+            android:layout_marginStart="2dp"
+            android:text="@string/set"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:onClick="mySetClickHandler"/>
+
+        <Button
+            android:id="@+id/button_status"
+            android:layout_width="90dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:text="@string/start"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:onClick="myStartClickHandler"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
